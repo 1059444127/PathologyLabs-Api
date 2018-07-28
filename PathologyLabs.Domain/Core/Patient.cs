@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PathologyLabs.Domain.Core
 {
@@ -9,6 +10,8 @@ namespace PathologyLabs.Domain.Core
         public Person Spouse { get; set; }
 
         public BloodGroup BloodGroup { get; set; }
+
+        public IEnumerable<Report> Reports { get; set; }
     }
     
     public enum BloodGroup
