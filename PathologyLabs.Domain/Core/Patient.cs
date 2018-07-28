@@ -14,6 +14,8 @@ namespace PathologyLabs.Domain.Core
         public BloodGroup BloodGroup { get; set; }
 
         public IEnumerable<Report> Reports { get; set; }
+
+        public IEnumerable<PathologyTestPatient> PathologyTestPatients { get; set; }
     }
     
     public enum BloodGroup
