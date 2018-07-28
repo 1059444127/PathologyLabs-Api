@@ -5,6 +5,9 @@
         public string Name { get; set; }
 
         public TestType Type { get; set; }
+
+        public Patient Patient { get; set; }
+        public int PatientId { get; set; }
     }
 
     public class TestType : Entity<short>

@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PathologyLabs.Domain.Core
 {
-    public class Patient : Person
+    public class Patient : Person<long>
     {
-        public Person Parent { get; set; }
+        public PatientRelation Parent { get; set; }
+        public int ParentId { get; set; }
 
-        public Person Spouse { get; set; }
+        public PatientRelation Spouse { get; set; }
+        public int SpouseId { get; set; }
 
         public BloodGroup BloodGroup { get; set; }
 
