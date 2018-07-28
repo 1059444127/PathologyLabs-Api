@@ -23,6 +23,7 @@ namespace PathologyLabs.Repositories
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
             builder.ApplyConfiguration(new PathologyTestEntityTypeConfiguration());
             builder.ApplyConfiguration(new PathologyTestPatientEntityTypeConfiguration());
             builder.ApplyConfiguration(new PatientEntityTypeConfiguration());

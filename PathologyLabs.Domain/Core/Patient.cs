@@ -6,10 +6,10 @@ namespace PathologyLabs.Domain.Core
     public class Patient : Person<long>
     {
         public PatientRelation Parent { get; set; }
-        public int ParentId { get; set; }
+        public long ParentId { get; set; }
 
         public PatientRelation Spouse { get; set; }
-        public int SpouseId { get; set; }
+        public long SpouseId { get; set; }
 
         public BloodGroup BloodGroup { get; set; }
 

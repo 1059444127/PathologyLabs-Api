@@ -29,7 +29,9 @@ namespace PathologyLabs.Repositories.Configurations
 
             builder
                 .HasOne(patient => patient.Spouse)
-                .WithOne(spouse => spouse.PartnerOfSpouse);
+                .WithOne(spouse => spouse.PartnerOfSpouse)
+                .HasForeignKey<Patient>(patient => patient.SpouseId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
