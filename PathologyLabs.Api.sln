@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Api", "Pathol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Domain", "PathologyLabs.Domain\PathologyLabs.Domain.csproj", "{ADC6056C-6C01-4F9C-B14F-E1D2D7985185}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Services", "PathologyLabs.Services\PathologyLabs.Services.csproj", "{44681388-E795-41A5-B078-B89C26CBA179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Repositories", "PathologyLabs.Repositories\PathologyLabs.Repositories.csproj", "{4639C2C4-2A83-4F07-B880-5807A023B35C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{ADC6056C-6C01-4F9C-B14F-E1D2D7985185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADC6056C-6C01-4F9C-B14F-E1D2D7985185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADC6056C-6C01-4F9C-B14F-E1D2D7985185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44681388-E795-41A5-B078-B89C26CBA179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44681388-E795-41A5-B078-B89C26CBA179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44681388-E795-41A5-B078-B89C26CBA179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44681388-E795-41A5-B078-B89C26CBA179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4639C2C4-2A83-4F07-B880-5807A023B35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4639C2C4-2A83-4F07-B880-5807A023B35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4639C2C4-2A83-4F07-B880-5807A023B35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4639C2C4-2A83-4F07-B880-5807A023B35C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
