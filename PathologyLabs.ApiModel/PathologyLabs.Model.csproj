@@ -5,9 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathologyLabs.ApiModel\PathologyLabs.Model.csproj" />
+    <PackageReference Include="AutoMapper.Attributes" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PathologyLabs.Domain\PathologyLabs.Domain.csproj" />
-    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.csproj" />
   </ItemGroup>
 
 </Project>
