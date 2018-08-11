@@ -8,7 +8,7 @@ using PathologyLabs.Domain.Core;
 
 namespace PathologyLabs.Repositories
 {
-    public abstract class Repository<TDomain, TPrimaryKey> : IRepository<TDomain, TPrimaryKey> 
+    public class Repository<TDomain, TPrimaryKey> : IRepository<TDomain, TPrimaryKey> 
         where TDomain : Entity<TPrimaryKey> 
         where TPrimaryKey : struct
     {

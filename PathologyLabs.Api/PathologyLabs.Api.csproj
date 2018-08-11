@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Services\PathologyLabs.Services.csproj" />
   </ItemGroup>
 
 </Project>

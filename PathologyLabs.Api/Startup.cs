@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PathologyLabs.Domain.App;
 using PathologyLabs.Repositories;
+using PathologyLabs.Services;
 
 namespace PathologyLabs.Api
 {
@@ -29,6 +30,10 @@ namespace PathologyLabs.Api
                     options.UseSqlServer(this.Configuration.GetConnectionString("Default")))
                 .AddIdentity<PathologyLabsUser, IdentityRole<long>>(option => option.Lockout.MaxFailedAccessAttempts = 5)
                 .AddEntityFrameworkStores<PathologyLabsDbContext>();
+
+            services
+                .AddScoped(typeof(IRepository<,>), typeof(Repository<,>))
+                .AddScoped(typeof(IService<,,>), typeof(Service<,,>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,7 +7,7 @@ using PathologyLabs.Repositories;
 
 namespace PathologyLabs.Services
 {
-    public abstract class Service<TDomain, TApiModel> : Service<TDomain, TApiModel, int>
+    public class Service<TDomain, TApiModel> : Service<TDomain, TApiModel, int>
         where TDomain : Entity
         where TApiModel : ApiModel
     {
@@ -16,7 +16,7 @@ namespace PathologyLabs.Services
         }
     }
 
-    public abstract class Service<TDomain, TApiModel, TPrimaryKey> : IService<TDomain, TApiModel, TPrimaryKey>
+    public class Service<TDomain, TApiModel, TPrimaryKey> : IService<TDomain, TApiModel, TPrimaryKey>
         where TDomain : Entity<TPrimaryKey>
         where TApiModel : ApiModel<TPrimaryKey>
         where TPrimaryKey : struct
