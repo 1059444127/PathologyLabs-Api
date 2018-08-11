@@ -4,7 +4,7 @@ using PathologyLabs.Domain.Core;
 namespace PathologyLabs.Model.Core.Patients
 {
     [MapsTo(typeof(Patient))]
-    public class PatientApiModel : ApiModel<long>
+    public class PatientApiModel : PersonApiModel<long>
     {
         public PatientRelationApiModel Parent { get; set; }
 

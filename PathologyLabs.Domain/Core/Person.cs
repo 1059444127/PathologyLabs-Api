@@ -1,5 +1,9 @@
 ﻿namespace PathologyLabs.Domain.Core
 {
+    public abstract class Person : Person<int> 
+    {
+    }
+
     public abstract class Person<TPrimaryKey> : Entity<TPrimaryKey> where TPrimaryKey : struct
     {
         public virtual string FirstName { get; set; }

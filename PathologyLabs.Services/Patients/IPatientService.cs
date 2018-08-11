@@ -6,7 +6,7 @@ using PathologyLabs.Model.Core.Patients;
 
 namespace PathologyLabs.Services.Patients
 {
-    public interface IPatientService : IService<Patient, PatientApiModel, long>
+    public interface IPatientService : IPeopleService<Patient, PatientApiModel, long>
     {
         Task<IEnumerable<ReportApiModel>> GetPatientReportsAsync(long patientId);
     }

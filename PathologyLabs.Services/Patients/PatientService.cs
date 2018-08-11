@@ -9,9 +9,9 @@ using PathologyLabs.Repositories;
 
 namespace PathologyLabs.Services.Patients
 {
-    public class PatientService : Service<Patient, PatientApiModel, long>, IPatientService
+    public class PatientService : PeopleService<Patient, PatientApiModel, long>, IPatientService
     {
-        protected PatientService(IRepository<Patient, long> repository) : base(repository)
+        public PatientService(IRepository<Patient, long> repository) : base(repository)
         {
         }
 
