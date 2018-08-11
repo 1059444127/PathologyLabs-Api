@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using PathologyLabs.Domain.Core;
 
@@ -59,7 +61,15 @@ namespace PathologyLabs.Repositories
 
         public virtual async Task<TDomain> UpdateAsync(TDomain entity)
         {
+            this.Context.Patients.Include(patient => patient.Reports);
             return await this._executor(Task.FromResult(this.Context.Update<TDomain>(entity)), true).ConfigureAwait(false);
+        }
+
+        public virtual async Task<IQueryable<TDomain>> GetAllIncludingAsync(params Expression<Func<TDomain, object>>[] propertySelectors)
+        {
+            IQueryable<TDomain> query = this.Context.Set<TDomain>().AsQueryable();
+            propertySelectors?.ToList()?.ForEach(s => query = query.Include(s));
+            return await Task.FromResult(query).ConfigureAwait(false);
         }
     }
 }

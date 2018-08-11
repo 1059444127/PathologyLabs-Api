@@ -21,40 +21,40 @@ namespace PathologyLabs.Services
         where TApiModel : ApiModel<TPrimaryKey>
         where TPrimaryKey : struct
     {
-        private readonly IRepository<TDomain, TPrimaryKey> _repository;
+        protected IRepository<TDomain, TPrimaryKey> Repository { get; private set; }
 
         protected Service(IRepository<TDomain, TPrimaryKey> repository)
         {
-            this._repository = repository;
+            this.Repository = repository;
         }
 
         public virtual async Task<TApiModel> CreateAsync(TApiModel model)
         {
-            TDomain entity = await this._repository.CreateAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
+            TDomain entity = await this.Repository.CreateAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
             return Mapper.Map<TApiModel>(entity);
         }
 
         public virtual async Task<TApiModel> DeleteAsync(TApiModel model)
         {
-            TDomain entity = await this._repository.DeleteAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
+            TDomain entity = await this.Repository.DeleteAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
             return Mapper.Map<TApiModel>(entity);
         }
 
         public virtual async Task<IEnumerable<TApiModel>> GetAllAsync()
         {
-            IEnumerable<TDomain> entities = await this._repository.GetAllAsync().ConfigureAwait(false);
+            IEnumerable<TDomain> entities = await this.Repository.GetAllAsync().ConfigureAwait(false);
             return Mapper.Map<IEnumerable<TApiModel>>(entities);
         }
 
         public virtual async Task<TApiModel> GetAsync(TPrimaryKey id)
         {
-            TDomain entity = await this._repository.GetAsync(id).ConfigureAwait(false);
+            TDomain entity = await this.Repository.GetAsync(id).ConfigureAwait(false);
             return Mapper.Map<TApiModel>(entity);
         }
 
         public virtual async Task<TApiModel> UpdateAsync(TApiModel model)
         {
-            TDomain entity = await this._repository.UpdateAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
+            TDomain entity = await this.Repository.UpdateAsync(Mapper.Map<TDomain>(model)).ConfigureAwait(false);
             return Mapper.Map<TApiModel>(entity);
         }
     }

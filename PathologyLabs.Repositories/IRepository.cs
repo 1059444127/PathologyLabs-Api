@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using PathologyLabs.Domain.Core;
 
@@ -19,5 +21,7 @@ namespace PathologyLabs.Repositories
         Task<TDomain> UpdateAsync(TDomain entity);
 
         Task<TDomain> DeleteAsync(TDomain entity);
+
+        Task<IQueryable<TDomain>> GetAllIncludingAsync(params Expression<Func<TDomain, object>>[] propertySelectors);
     }
 }
