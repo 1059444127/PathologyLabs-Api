@@ -5,7 +5,7 @@ using PathologyLabs.Domain.Core;
 using PathologyLabs.Model.Core;
 using PathologyLabs.Repositories;
 
-namespace PathologyLabs.Services
+namespace PathologyLabs.Services.Implementation
 {
     public class Service<TDomain, TApiModel> : Service<TDomain, TApiModel, int>
         where TDomain : Entity

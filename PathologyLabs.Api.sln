@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Api", "Pathol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Domain", "PathologyLabs.Domain\PathologyLabs.Domain.csproj", "{ADC6056C-6C01-4F9C-B14F-E1D2D7985185}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Services", "PathologyLabs.Services\PathologyLabs.Services.csproj", "{44681388-E795-41A5-B078-B89C26CBA179}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Services.Shared", "PathologyLabs.Services\PathologyLabs.Services.Shared.csproj", "{44681388-E795-41A5-B078-B89C26CBA179}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Repositories", "PathologyLabs.Repositories\PathologyLabs.Repositories.csproj", "{4639C2C4-2A83-4F07-B880-5807A023B35C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Repositories.Shared", "PathologyLabs.Repositories\PathologyLabs.Repositories.Shared.csproj", "{4639C2C4-2A83-4F07-B880-5807A023B35C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Model", "PathologyLabs.ApiModel\PathologyLabs.Model.csproj", "{007FD33E-4D61-44D2-8529-E05764B69904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathologyLabs.Model", "PathologyLabs.ApiModel\PathologyLabs.Model.csproj", "{007FD33E-4D61-44D2-8529-E05764B69904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Repositories.Implementation", "PathologyLabs.Repositories.Implementation\PathologyLabs.Repositories.Implementation.csproj", "{17B91F6E-15E4-43CF-B1C0-5E1395D0A748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathologyLabs.Services.Implementation", "PathologyLabs.Services.Implementation\PathologyLabs.Services.Implementation.csproj", "{27F83677-F14E-4921-844C-22EE57BE3628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{007FD33E-4D61-44D2-8529-E05764B69904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{007FD33E-4D61-44D2-8529-E05764B69904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{007FD33E-4D61-44D2-8529-E05764B69904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B91F6E-15E4-43CF-B1C0-5E1395D0A748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B91F6E-15E4-43CF-B1C0-5E1395D0A748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B91F6E-15E4-43CF-B1C0-5E1395D0A748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B91F6E-15E4-43CF-B1C0-5E1395D0A748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F83677-F14E-4921-844C-22EE57BE3628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F83677-F14E-4921-844C-22EE57BE3628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F83677-F14E-4921-844C-22EE57BE3628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F83677-F14E-4921-844C-22EE57BE3628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

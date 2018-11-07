@@ -21,17 +21,6 @@ namespace PathologyLabs.Repositories.Configurations
             builder
                 .Property(patient => patient.BloodGroup)
                 .IsRequired();
-
-            builder
-                .HasOne(patient => patient.Parent)
-                .WithMany(parent => parent.ChildrenOfParent)
-                .HasForeignKey(patient => patient.ParentId);
-
-            builder
-                .HasOne(patient => patient.Spouse)
-                .WithOne(spouse => spouse.PartnerOfSpouse)
-                .HasForeignKey<Patient>(patient => patient.SpouseId)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

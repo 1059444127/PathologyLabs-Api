@@ -7,7 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PathologyLabs.Domain.App;
 using PathologyLabs.Repositories;
+using PathologyLabs.Repositories.Implementation;
 using PathologyLabs.Services;
+using PathologyLabs.Services.Implementation;
 
 namespace PathologyLabs.Api
 {

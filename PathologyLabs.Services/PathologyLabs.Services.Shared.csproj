@@ -7,7 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PathologyLabs.ApiModel\PathologyLabs.Model.csproj" />
     <ProjectReference Include="..\PathologyLabs.Domain\PathologyLabs.Domain.csproj" />
-    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.Shared.csproj" />
   </ItemGroup>
 
 </Project>

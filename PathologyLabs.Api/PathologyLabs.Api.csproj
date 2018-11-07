@@ -14,8 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.csproj" />
-    <ProjectReference Include="..\PathologyLabs.Services\PathologyLabs.Services.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Repositories.Implementation\PathologyLabs.Repositories.Implementation.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.Shared.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Services.Implementation\PathologyLabs.Services.Implementation.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Services\PathologyLabs.Services.Shared.csproj" />
   </ItemGroup>
 
 </Project>

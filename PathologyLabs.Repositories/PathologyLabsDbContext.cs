@@ -11,8 +11,6 @@ namespace PathologyLabs.Repositories
     {
         public virtual DbSet<Patient> Patients { get; set; }
 
-        public virtual DbSet<PatientRelation> PatientRelations { get; set; }
-
         public virtual DbSet<PathologyTest> PathologyTests { get; set; }
 
         public virtual DbSet<Report> Reports { get; set; }
@@ -25,9 +23,7 @@ namespace PathologyLabs.Repositories
         {
             base.OnModelCreating(builder);
             builder.ApplyConfiguration(new PathologyTestEntityTypeConfiguration());
-            builder.ApplyConfiguration(new PathologyTestPatientEntityTypeConfiguration());
             builder.ApplyConfiguration(new PatientEntityTypeConfiguration());
-            builder.ApplyConfiguration(new PatientRelationEntityTypeConfiguration());
             builder.ApplyConfiguration(new ReportEntityTypeConfiguration());
             builder.ApplyConfiguration(new TestTypeEntityTypeConfiguration());
         }

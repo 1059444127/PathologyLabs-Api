@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PathologyLabs.ApiModel\PathologyLabs.Model.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Domain\PathologyLabs.Domain.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.Shared.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Services\PathologyLabs.Services.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

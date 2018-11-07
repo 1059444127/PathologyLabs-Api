@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using PathologyLabs.Domain.Core;
 
-namespace PathologyLabs.Repositories
+namespace PathologyLabs.Repositories.Implementation
 {
-    public class Repository<TDomain, TPrimaryKey> : IRepository<TDomain, TPrimaryKey> 
-        where TDomain : Entity<TPrimaryKey> 
+    public class Repository<TDomain, TPrimaryKey> : IRepository<TDomain, TPrimaryKey>
+        where TDomain : Entity<TPrimaryKey>
         where TPrimaryKey : struct
     {
         private Func<Task<EntityEntry<TDomain>>, bool, Task<TDomain>> _executor;
 
         protected PathologyLabsDbContext Context { get; private set; }
-        
+
         protected Repository(PathologyLabsDbContext context)
         {
             this.Context = context;
