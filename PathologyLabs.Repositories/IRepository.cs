@@ -6,22 +6,22 @@ using PathologyLabs.Domain.Core;
 
 namespace PathologyLabs.Repositories
 {
-    public interface IRepository<TDomain> : IRepository<TDomain, int> where TDomain : Entity
+    public interface IRepository<TEntity> : IRepository<TEntity, int> where TEntity : Entity
     {
     }
 
-    public interface IRepository<TDomain, TPrimaryKey> where TDomain : Entity<TPrimaryKey> where TPrimaryKey : struct
+    public interface IRepository<TEntity, TPrimaryKey> where TEntity : Entity<TPrimaryKey> where TPrimaryKey : struct
     {
-        Task<TDomain> GetAsync(TPrimaryKey id);
+        Task<TEntity> GetAsync(TPrimaryKey id);
 
-        Task<IQueryable<TDomain>> GetAllAsync();
+        Task<IQueryable<TEntity>> GetAllAsync();
 
-        Task<TDomain> CreateAsync(TDomain entity);
+        Task<TEntity> CreateAsync(TEntity entity);
 
-        Task<TDomain> UpdateAsync(TDomain entity);
+        Task<TEntity> UpdateAsync(TEntity entity);
 
-        Task<TDomain> DeleteAsync(TDomain entity);
+        Task<TEntity> DeleteAsync(TEntity entity);
 
-        Task<IQueryable<TDomain>> GetAllIncludingAsync(params Expression<Func<TDomain, object>>[] propertySelectors);
+        Task<IQueryable<TEntity>> GetAllIncludingAsync(params Expression<Func<TEntity, object>>[] propertySelectors);
     }
 }

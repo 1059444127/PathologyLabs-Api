@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PathologyLabs.Domain\PathologyLabs.Domain.csproj" />
+    <ProjectReference Include="..\PathologyLabs.Repositories\PathologyLabs.Repositories.Shared.csproj" />
   </ItemGroup>
 
 </Project>
